@@ -25,8 +25,17 @@ export default function LoginPage() {
             custom_error: null
         };
 
-        if (inputs.email.trim() === "") newErrors.email.required = true, hasError = true;
-        if (inputs.password.trim() === "") newErrors.password.required = true, hasError = true;
+        // if (inputs.email.trim() === "") newErrors.email.required = true, hasError = true;
+        // if (inputs.password.trim() === "") newErrors.password.required = true, hasError = true;
+        if (inputs.email.trim() === "") {
+            newErrors.email.required = true;
+            hasError = true;
+        }
+        if (inputs.password.trim() === "") {
+            newErrors.password.required = true;
+            hasError = true;
+        }
+        
 
         setErrors(newErrors);
 
